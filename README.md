@@ -132,6 +132,6 @@ Admin views all records → confirms patients, doctors, and appointments are sto
 
 
 
-     ![clinic_appointment_cli ](cli.png)
+   ![clinic_appointment_cli ](cli.png)
 
 
