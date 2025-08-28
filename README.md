@@ -1,135 +1,137 @@
-Author
-Made with ❤ by Abdirahman Dagane.
+👤 Author
+Abdirahman Dagane
 
  Clinic Appointment CLI
  
-A simple Command-Line Interface (CLI) application for managing clinic appointments.
- It allows patients to book appointments, doctors to view their schedules, and admins to manage clinic records.
+A simple command-line interface (CLI) application for managing a clinic’s appointments, patients, and doctors.
+ This project simulates how patients, doctors, and admins interact in a healthcare setting.
 
  Features
  
- Patients can book appointments with doctors
- Doctors can view all their scheduled appointments
- Admins can view and manage patients, doctors, and appointments
- Simple SQLite database for storing records
- Runs entirely from the terminal (no internet required)
-
- Project Structure
- 
-clinic-appointment-cli/
-│── main.py            │── database.py         
-│── models.py         
-│── requirements.txt 
-│── README.md         
-│── clinic.db          
+ Patients
 
 
-Installation & Setup
-
-Clone or Download this project
-
-        [ git clone https://github.com/daganeabdul/clinic-appointment-cli.git](https://github.com/daganeabdul/clinic_appointment_cli.git)
+Book appointments with doctors at a specific time.
 
 
-         cd clinic-appointment-cli
+ Doctors
 
 
-Check Python Version (Python 3.8 or above recommended)
-
- python --version
- 
-Run the Application
-
-      pipenv run python main.py
+View scheduled appointments.
 
 
-
- The app will automatically create a clinic.db SQLite database on the first run.
-
- How to Use
- 
-1️ Patient
-Choose Patient from the menu
+ Admin
 
 
-Enter your name and select a doctor
+Manage patients, doctors, and appointments.
 
 
-Pick a date & time to book your appointment
-
-
-2️ Doctor
-
-Choose  Doctor from the menu
-
-
-Enter your name
-
-
-View all scheduled appointments with patient details
-
-
-3️ Admin
-
-Choose Admin from the menu
-
-
-View all patients, doctors, and appointments
-
-
-Future extension: Add/remove doctors, update patient info
+View all clinic records in an organized way.
 
 
 
  Tech Stack
  
-Python 3 (Core logic)
+Python 3 – Core programming language
 
 
-SQLite3 (Database)
+SQLite3 – Database for storing patients, doctors, and appointments
 
 
-Standard Library Only (no external dependencies)
-
-
-
- Example Run
- 
-=== Clinic Appointment CLI ===
-
-1. Patient
-2. Doctor
-3. Admin
-4. Exit
-Choose role: 1
-
---- Patient Menu ---
-
-1. Register as new patient
-2. Book an appointment
-3. View my appointments
-4. Back
-Choose: 1
-Name: zam
-Age: 21
-Gender: female
-Contact info: zam@gmail.com
-Registered Patient ID: 4
-
---- Patient Menu ---
-
-1. Register as new patient
-2. Book an appointment
-3. View my appointments
-4. Back
-Choose: 
-
-
- 
+CLI – Simple text-based interface
 
 
 
+ Project Structure
+clinic-appointment-cli/
+│── main.py             │── database.py          │── models.py           Doctor, Appointment classes
+│── clinic.db           │── README.md           
 
 
+
+ How to Run
+Clone this repository or create the files manually.
+
+          https://github.com/daganeabdul/clinic_appointment_cli.git
+cd clinic-appointment-cli
+
+
+Run the program:
+
+    pipenv run python main.py
+
+Follow the menu prompts:
+
+
+Choose whether you are Admin, Doctor, or Patient.
+
+
+Perform actions like booking an appointment, viewing schedules, or managing records.
+
+
+
+  Database Schema
+  
+The app uses SQLite3 with 3 tables:
+
+Patients
+
+
+id (Primary Key)
+
+
+name
+
+
+age
+
+
+gender
+
+
+Doctors
+
+
+id (Primary Key)
+
+
+name
+
+
+specialization
+
+
+Appointments
+
+
+id (Primary Key)
+
+
+patient_id (Foreign Key → Patients.id)
+
+
+doctor_id (Foreign Key → Doctors.id)
+
+
+date
+
+
+time
+
+
+
+  Example Workflow
+Patient books appointment with Dr. Ali at 10:00 AM, 1st Sept 2025.
+
+
+Doctor checks their schedule → sees appointment with Patient A.
+
+
+Admin views all records → confirms patients, doctors, and appointments are stored correctly.
+
+
+
+
+     ![clinic_appointment_cli ](cli.png)
 
 
