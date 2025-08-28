@@ -5,9 +5,9 @@ def run():
     session = SessionLocal()
     if session.query(Doctor).count() == 0:
         session.add_all([
-            Doctor(name="Dr. Asha Noor", specialization="General Medicine", contact_info="0700-111-111"),
-            Doctor(name="Dr. Yusuf Ali", specialization="Pediatrics", contact_info="0700-222-222"),
-            Doctor(name="Dr. Mary Wanjiru", specialization="Dermatology", contact_info="0700-333-333"),
+            Doctor(name="Dr. Ali Noor", specialization="General Medicine", contact_info="0700-451-171"),
+            Doctor(name="Dr. Yusuf Ali", specialization="Pediatrics", contact_info="0730-292-052"),
+            Doctor(name="Dr. Mary Wanjiru", specialization="Dermatology", contact_info="0790-313-073"),
         ])
     if session.query(Patient).count() == 0:
         session.add_all([

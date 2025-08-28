@@ -14,8 +14,8 @@ class Patient(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     age = Column(Integer, CheckConstraint("age >= 0"))
-    gender = Column(String)               # e.g., "Male", "Female", "Other"
-    contact_info = Column(String)         # phone/email
+    gender = Column(String)               
+    contact_info = Column(String)       
 
     appointments = relationship("Appointment", back_populates="patient", cascade="all, delete-orphan")
 
