@@ -2,7 +2,7 @@ from colorama import Fore, Style, init
 from cli.menu import patient_menu, doctor_menu, admin_menu, MAIN_MENU, print_menu
 
 def main():
-    init(autoreset=True)  # colorama
+    init(autoreset=True)  # this colorama
     ACTIONS = {
         "1": patient_menu,
         "2": doctor_menu,

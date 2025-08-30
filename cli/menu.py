@@ -5,10 +5,10 @@ from db.database import SessionLocal
 from db.models import Patient, Doctor, Appointment, ALLOWED_STATUSES
 from .prompts import read_int, read_nonempty, read_datetime, confirm
 
-# one Session for this simple CLI
+
 session = SessionLocal()
 
-# Tuples for visible menu options
+
 MAIN_MENU = (
     "1. Patient",
     "2. Doctor",
@@ -38,7 +38,7 @@ def patient_book():
         print(Fore.RED + "Patient not found." + Style.RESET_ALL)
         return
 
-    # List doctors (list of tuples -> tabulate)
+  
     doctors = session.query(Doctor).order_by(Doctor.id).all()
     if not doctors:
         print(Fore.RED + "No doctors found. Ask admin to add doctors." + Style.RESET_ALL)
@@ -53,7 +53,7 @@ def patient_book():
         return
 
     appt_time = read_datetime("Appointment time")
-    # Prevent double booking of doctor at same time
+   
     conflict = (
         session.query(Appointment)
         .filter(
@@ -87,7 +87,7 @@ def patient_view():
     if not appts:
         print(Fore.YELLOW + "No appointments found." + Style.RESET_ALL)
         return
-    # List of dicts -> then print as table
+    # List of dicts that are  then print as table
     rows = [
         {
             "ID": a.id,
@@ -106,7 +106,7 @@ def patient_menu():
         "3. View my appointments",
         "4. Back",
     )
-    ACTIONS = {  # Dict mapping
+    ACTIONS = {  #this for dict mapping
         "1": patient_register,
         "2": patient_book,
         "3": patient_view,
