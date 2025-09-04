@@ -59,7 +59,15 @@ cd clinic-appointment-cli
 
 Run the program:
 
-    pipenv run python main.py
+    pipenv install
+    pipenv shell
+    python main.py
+
+or Directly run 
+
+     pipenv run python main.py
+
+    
 
 Follow the menu prompts:
 
