@@ -58,6 +58,7 @@ cd clinic-appointment-cli
 
 
 Run the program:
+
   Package           Version
 ----------------- -------
 alembic           1.16.5
