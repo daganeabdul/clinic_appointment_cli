@@ -57,7 +57,7 @@ Clone this repository or create the files manually.
 cd clinic-appointment-cli
 
 
-Run the program:
+Packages needed to run the program:
 
   Package           Version
 ----------------- -------
@@ -87,6 +87,10 @@ tabulate          0.9.0
 
 typing_extensions 4.15.0
 
+    pipenv install typing_extensions
+    pipenv install colorama
+
+to run 
     pipenv install
     pipenv shell
     python main.py
