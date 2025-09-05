@@ -58,6 +58,7 @@ cd clinic-appointment-cli
 
 
 Run the program:
+   pipenv install colorama
 
     pipenv install
     pipenv shell
