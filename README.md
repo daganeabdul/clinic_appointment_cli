@@ -61,17 +61,29 @@ Run the program:
   Package           Version
 ----------------- -------
 alembic           1.16.5
+
 colorama          0.4.6
+
 iniconfig         2.1.0
+
 Mako              1.3.10
+
 MarkupSafe        3.0.2
+
 packaging         25.0
+
 pip               25.2
+
 pluggy            1.6.0
+
 Pygments          2.19.2
+
 pytest            8.4.1
+
 SQLAlchemy        2.0.43
+
 tabulate          0.9.0
+
 typing_extensions 4.15.0
 
     pipenv install
